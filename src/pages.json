@@ -5,6 +5,12 @@
 			"style": {
 				"navigationBarTitleText": "健康襄阳"
 			}
+		},
+		{
+			"path": "pages/test/index",
+			"style": {
+				"navigationBarTitleText": "测试路由"
+			}
 		}
 	],
 	"globalStyle": {

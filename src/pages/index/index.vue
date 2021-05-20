@@ -25,6 +25,7 @@
 			...mapMutations(["setCount"]),
 			add() {
 				this.setCount(4);
+				this.$miniApp.toTargetRoute("test")
 			}
 		}
 	}
