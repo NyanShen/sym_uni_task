@@ -1,13 +1,14 @@
 <template>
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
-		<view>
-			<text class="title">{{title}}</text>
+		<view @click="add">
+			<text class="title">{{title}}-{{count}}</text>
 		</view>
 	</view>
 </template>
 
 <script>
+	import { mapState, mapMutations } from 'vuex'
 	export default {
 		data() {
 			return {
@@ -17,8 +18,14 @@
 		onLoad() {
 
 		},
+		computed: {
+			...mapState(["count"])
+		},
 		methods: {
-
+			...mapMutations(["setCount"]),
+			add() {
+				this.setCount(4);
+			}
 		}
 	}
 </script>
