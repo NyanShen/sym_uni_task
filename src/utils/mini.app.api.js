@@ -3,7 +3,7 @@
  */
 
 /**
- * 跳转页面api
+ * 跳转页面api-navigateTo
  */
 export function toTargetRoute(pageName, urlParams) {
 	let targetPage = `/pages/${pageName}/index`
@@ -14,6 +14,7 @@ export function toTargetRoute(pageName, urlParams) {
 		url: targetPage
 	})
 }
+
 
 export default {
 	toTargetRoute

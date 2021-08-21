@@ -11,11 +11,17 @@
 			"style": {
 				"navigationBarTitleText": "测试路由"
 			}
+		},
+		{
+			"path": "pages/testEditor/index",
+			"style": {
+				"navigationBarTitleText": "editor"
+			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "健康襄阳",
+		"navigationBarTitleText": "uni test",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}
