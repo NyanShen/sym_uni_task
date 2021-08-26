@@ -31,11 +31,11 @@ export default {
   onLoad() {
     let self = this;
     const toolbarHeight = 50;
-    const { windowHeight, platform } = wx.getSystemInfoSync();
+    const { windowHeight, platform } = uni.getSystemInfoSync();
     self.isIOS = platform === "ios";
     self.editorHeight = windowHeight - toolbarHeight;
-    wx.onKeyboardHeightChange((res) => {
-      if (res.height === keyboardHeight) return;
+    uni.onKeyboardHeightChange((res) => {
+      if (res.height === self.keyboardHeight) return;
       self.keyboardHeight = res.height;
       self.editorHeight = windowHeight - toolbarHeight - res.height
     });
@@ -43,7 +43,7 @@ export default {
   methods: {
     onEditorReady() {
       const that = this;
-      wx.createSelectorQuery()
+      uni.createSelectorQuery()
         .select("#editor")
         .context(function (res) {
           that.editorCtx = res.context;
